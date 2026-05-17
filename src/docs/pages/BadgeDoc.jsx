@@ -1,9 +1,11 @@
-import React from 'react';
 import Badge from '../../lib/components/Badge';
-import { ComponentPreview, PropsTable, SectionTitle } from '../DocComponents';
+import { ComponentPreview, PropsTable, SectionTitle, NoteBlock } from '../DocComponents';
 
 const BadgeDoc = () => (
   <div className="space-y-10">
+    <NoteBlock type="tip">
+      Explore the <strong>Badge Lab</strong> for status badges, notification counters, badge groups, and animated pulse badges.
+    </NoteBlock>
     <section>
       <SectionTitle>Variants</SectionTitle>
       <ComponentPreview

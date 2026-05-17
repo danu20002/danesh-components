@@ -1,4 +1,3 @@
-import React from 'react';
 import Progress from '../../lib/components/Progress';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 

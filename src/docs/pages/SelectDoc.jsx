@@ -1,4 +1,3 @@
-import React from 'react';
 import Select from '../../lib/components/Select';
 import { Globe, Shield, Zap } from 'lucide-react';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';

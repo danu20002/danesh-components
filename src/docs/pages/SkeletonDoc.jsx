@@ -1,4 +1,3 @@
-import React from 'react';
 import Skeleton from '../../lib/components/Skeleton';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import Kbd from '../../lib/components/Kbd';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 

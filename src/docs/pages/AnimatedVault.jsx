@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   Zap, Sparkles, Send, Download, Plus, ArrowRight, 
   Settings, Play, Check, Trash2, Heart, Star, 

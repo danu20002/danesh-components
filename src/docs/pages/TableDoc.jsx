@@ -1,4 +1,3 @@
-import React from 'react';
 import Table from '../../lib/components/Table';
 import Badge from '../../lib/components/Badge';
 import Avatar from '../../lib/components/Avatar';

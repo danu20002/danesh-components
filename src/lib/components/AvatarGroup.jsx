@@ -1,4 +1,3 @@
-import React from 'react';
 import { clsx } from 'clsx';
 
 const AvatarGroup = ({ avatars = [], max = 4, size = "md", className = "" }) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import Tooltip from '../../lib/components/Tooltip';
 import Button from '../../lib/components/Button';
 import { HelpCircle, Info, Settings } from 'lucide-react';

@@ -6,7 +6,9 @@ import {
   Check, BookOpen, Zap, Shield, Paintbrush, Database, Table2, Sun, Moon,
   CheckSquare, Circle, List, AlignLeft, BarChart3, Clock, Square, Layout,
   Info, SeparatorHorizontal, MousePointer, Hash, Map, Navigation, Loader2,
-  Table as TableIcon, Globe, MessageSquare
+  Table as TableIcon, Globe, MessageSquare, KeyRound, Search as SearchIcon, Tags, Smartphone,
+  TextCursorInput, CreditCard, ShoppingCart, PhoneCall, UploadCloud, CircleDot,
+  Gauge, Layers3, AlignJustify, PanelRightOpen
 } from 'lucide-react';
 
 // Doc Pages
@@ -42,7 +44,27 @@ import EmptyStateDoc from './docs/pages/EmptyStateDoc';
 import TemplatesDoc from './docs/pages/TemplatesDoc';
 import ToastDoc from './docs/pages/ToastDoc';
 import ToastContainer from './lib/components/Toast';
+import PasswordInputDoc from './docs/pages/PasswordInputDoc';
+import SearchInputDoc from './docs/pages/SearchInputDoc';
+import TagInputDoc from './docs/pages/TagInputDoc';
+import OtpInputDoc from './docs/pages/OtpInputDoc';
+import FloatingLabDoc from './docs/pages/FloatingLabDoc';
+import InputMasksDoc from './docs/pages/InputMasksDoc';
+import SmartInputsDoc from './docs/pages/SmartInputsDoc';
+import PhoneInputDoc from './docs/pages/PhoneInputDoc';
+import FileDropzoneDoc from './docs/pages/FileDropzoneDoc';
 
+// Gallery Pages
+import CardLabDoc from './docs/pages/CardLabDoc';
+import AlertLabDoc from './docs/pages/AlertLabDoc';
+import BadgeLabDoc from './docs/pages/BadgeLabDoc';
+import ModalLabDoc from './docs/pages/ModalLabDoc';
+import TabsVaultDoc from './docs/pages/TabsVaultDoc';
+import ProgressGalleryDoc from './docs/pages/ProgressGalleryDoc';
+import SkeletonGalleryDoc from './docs/pages/SkeletonGalleryDoc';
+import TooltipGalleryDoc from './docs/pages/TooltipGalleryDoc';
+import DaneshIconsDoc from './docs/pages/DaneshIconsDoc';
+import DeveloperDoc from './docs/pages/DeveloperDoc';
 
 // Library Components
 import Badge from './lib/components/Badge';
@@ -56,6 +78,8 @@ const NAV_SECTIONS = [
       { id: 'Introduction', icon: Monitor, label: 'Introduction' },
       { id: 'Installation', icon: Terminal, label: 'Installation' },
       { id: 'Templates', icon: LayoutGrid, label: 'Templates' },
+      { id: 'DaneshIcons', icon: Sparkles, label: 'DaneshIcons' },
+      { id: 'Developer', icon: Users, label: 'Developer' },
     ]
   },
   {
@@ -72,14 +96,66 @@ const NAV_SECTIONS = [
           { id: 'FioriButtons', label: 'SAP Fiori' },
         ]
       },
-      { id: 'Input', icon: Type, label: 'Input' },
-      { id: 'Card', icon: LayoutGrid, label: 'Card' },
-      { id: 'Alert', icon: Bell, label: 'Alert' },
-      { id: 'Badge', icon: Sparkles, label: 'Badge' },
+      {
+        id: 'Input',
+        icon: Type,
+        label: 'Input',
+        subItems: [
+          { id: 'Input', label: 'Main Docs' },
+          { id: 'FloatingLab', label: 'Floating Lab' },
+          { id: 'InputMasks', label: 'Input Masks' },
+          { id: 'SmartInputs', label: 'Smart Inputs' },
+          { id: 'PhoneInput', label: 'Phone Input' },
+          { id: 'FileDropzone', label: 'File Upload' },
+        ]
+      },
+      {
+        id: 'Card',
+        icon: LayoutGrid,
+        label: 'Card',
+        subItems: [
+          { id: 'Card', label: 'Main Docs' },
+          { id: 'CardLab', label: 'Card Lab' },
+        ]
+      },
+      {
+        id: 'Alert',
+        icon: Bell,
+        label: 'Alert',
+        subItems: [
+          { id: 'Alert', label: 'Main Docs' },
+          { id: 'AlertLab', label: 'Alert Lab' },
+        ]
+      },
+      {
+        id: 'Badge',
+        icon: Sparkles,
+        label: 'Badge',
+        subItems: [
+          { id: 'Badge', label: 'Main Docs' },
+          { id: 'BadgeLab', label: 'Badge Lab' },
+        ]
+      },
       { id: 'Avatar', icon: Users, label: 'Avatar' },
       { id: 'Toggle', icon: ToggleLeft, label: 'Toggle' },
-      { id: 'Tabs', icon: PanelTop, label: 'Tabs' },
-      { id: 'Modal', icon: Boxes, label: 'Modal' },
+      {
+        id: 'Tabs',
+        icon: PanelTop,
+        label: 'Tabs',
+        subItems: [
+          { id: 'Tabs', label: 'Main Docs' },
+          { id: 'TabsVault', label: 'Tabs Vault' },
+        ]
+      },
+      {
+        id: 'Modal',
+        icon: Boxes,
+        label: 'Modal',
+        subItems: [
+          { id: 'Modal', label: 'Main Docs' },
+          { id: 'ModalLab', label: 'Modal Lab' },
+        ]
+      },
     ]
   },
   {
@@ -89,14 +165,20 @@ const NAV_SECTIONS = [
       { id: 'Radio', icon: Circle, label: 'Radio' },
       { id: 'Select', icon: List, label: 'Select' },
       { id: 'Textarea', icon: AlignLeft, label: 'Textarea' },
+      { id: 'PasswordInput', icon: KeyRound, label: 'Password' },
+      { id: 'SearchInput', icon: SearchIcon, label: 'Search' },
+      { id: 'TagInput', icon: Tags, label: 'Tag Input' },
+      { id: 'OtpInput', icon: Smartphone, label: 'OTP Input' },
     ]
   },
   {
     title: 'Feedback',
     items: [
       { id: 'Progress', icon: BarChart3, label: 'Progress' },
+      { id: 'ProgressGallery', icon: Gauge, label: 'Progress Gallery' },
       { id: 'Toast', icon: Clock, label: 'Toast' },
       { id: 'Skeleton', icon: Square, label: 'Skeleton' },
+      { id: 'SkeletonGallery', icon: Layers3, label: 'Skeleton Gallery' },
     ]
   },
   {
@@ -104,7 +186,10 @@ const NAV_SECTIONS = [
     items: [
       { id: 'Accordion', icon: Layout, label: 'Accordion' },
       { id: 'Tooltip', icon: Info, label: 'Tooltip' },
+      { id: 'Popover', icon: Navigation, label: 'Popover' },
+      { id: 'TooltipGallery', icon: AlignJustify, label: 'Tooltip Gallery' },
       { id: 'Divider', icon: SeparatorHorizontal, label: 'Divider' },
+      { id: 'Drawer', icon: PanelRightOpen, label: 'Drawer' },
     ]
   },
   {
@@ -156,11 +241,33 @@ const PAGE_DESCRIPTIONS = {
   AnimatedVault: "A collection of 50 high-performance button designs and motion presets.",
   SyncLab: "Choreographed micro-interactions built on shared timing offsets for elite precision.",
   FioriButtons: "Enterprise-grade button suite compatible with SAP UI5 and Fiori design standards.",
+  PasswordInput: "Secure password fields with strength meter, visibility toggle, and copy support.",
+  SearchInput: "Smart search inputs with debounce support, clear button, and keyboard shortcut hints.",
+  TagInput: "Chip-style tag inputs for emails, skills, and multi-value entry with validation.",
+  OtpInput: "One-time password input with auto-focus, paste support, and auto-submit on complete.",
+  FloatingLab: "Material-inspired floating label inputs with smooth animations across 4 visual variants.",
+  InputMasks: "Auto-formatting input masks for phone numbers, credit cards, dates, SSNs, and more.",
+  SmartInputs: "Intelligent autocomplete, number counters, and multi-currency formatters for data entry.",
+  PhoneInput: "International phone input with searchable country selector, flags, and dial codes.",
+  FileDropzone: "Drag-and-drop file upload with preview thumbnails, size validation, and progress states.",
+
+  CardLab: "Glass, interactive, metric, and pricing cards for data-rich dashboards and product showcases.",
+  AlertLab: "Banner alerts, stacked notifications, and action-oriented alert components for real-time feedback.",
+  BadgeLab: "Status indicators, notification counters, grouped badges, and animated pulse badges.",
+  TabsVault: "Underline, pill, and vertical tab variants for flexible content organization.",
+  ModalLab: "Slide-in drawers and confirmation dialogs for focused user interactions.",
+  ProgressGallery: "Circular progress rings, step wizards, and animated loaders for every context.",
+  SkeletonGallery: "Card, table, and list skeleton placeholders for elegant loading experiences.",
+  TooltipGallery: "Rich tooltips, popovers, and hover-triggered information panels.",
+  Popover: "Click-triggered popover panels with smart positioning and arrow indicators.",
+  Drawer: "Slide-in panels for settings, navigation, and detailed content views.",
+  DaneshIcons: "200+ premium SVG icons designed for the Danesh design system. Open source and fully customizable.",
+  Developer: "Meet the creator behind Danesh'UI — full stack developer, UI/UX designer, and open source enthusiast.",
 };
 
 const PAGE_TOC = {
   Button: ['Core Variants', 'Premium Variants', 'Shapes & Sizes', 'Interactive States', 'Icon Combinations', 'Hover Animations', 'API Reference'],
-  Input: ['Basic Input', 'With Icons', 'Sizes', 'Validation States', 'API Reference'],
+
   Card: ['Basic Card', 'With Footer', 'Hover Effect', 'Card Grid', 'API Reference'],
   Alert: ['Variants', 'Dismissible', 'Without Title', 'API Reference'],
   Badge: ['Variants', 'With Status Dot', 'Sizes', 'API Reference'],
@@ -170,6 +277,27 @@ const PAGE_TOC = {
   Modal: ['Basic Modal', 'Form Modal', 'API Reference'],
   Templates: ['Realistic ERP Template Preview', 'Template Features'],
   FioriButtons: ['Standard Action Types', 'Semantic / Status Types', 'High Contrast (Solid)', 'Functional Modes', 'Enterprise Usage Pattern'],
+  PasswordInput: ['Basic Password', 'With Strength Meter', 'With Copy Button', 'Validation States', 'Sizes', 'API Reference'],
+  SearchInput: ['Basic Search', 'With Clear & Shortcut', 'Debounced Search', 'Sizes', 'With Label', 'API Reference'],
+  TagInput: ['Basic Tag Input', 'Controlled Tags', 'Color Variants', 'Max Tags & Validation', 'Sizes', 'Error State', 'API Reference'],
+  OtpInput: ['Basic OTP', 'With Label', 'Controlled & Auto-Submit', 'Sizes', 'Error State', '4 Digit Short Code', 'API Reference'],
+  Input: ['Basic Input', 'With Icons', 'Sizes', 'Input Types', 'Validation States', 'Right Icon', 'Disabled & Read Only', 'Form Example', 'Input Group Layout', 'Dark Mode Compatible', 'API Reference'],
+  FloatingLab: ['Default Variant', 'Modern Variant', 'Outline Variant', 'Ghost Variant', 'Size Matrix', 'Usage'],
+  InputMasks: ['Mask Gallery', 'With Left & Right Icons', 'Size Variants', 'Usage'],
+  SmartInputs: ['Auto Suggest', 'Counter Input', 'Currency Input', 'Real World: Order Form', 'Usage'],
+  PhoneInput: ['Basic Phone Input', 'Different Countries', 'Country Search', 'Sizes', 'Validation', 'API Reference'],
+  FileDropzone: ['Basic File Upload', 'Images Only', 'Accept Types', 'Sizes', 'Single File Mode', 'Error & States', 'API Reference'],
+
+  CardLab: ['Glass Cards', 'Interactive Cards', 'Metric Cards', 'Pricing Cards', 'Expandable Cards', 'Profile Cards', 'Usage'],
+  AlertLab: ['Alert Banner', 'Alert Stack', 'Alert With Action', 'Usage'],
+  BadgeLab: ['Status Badges', 'Notification Badges', 'Badge Groups', 'Pulsing Badges', 'Usage'],
+  TabsVault: ['Underline Tabs', 'Pill Tabs', 'Vertical Tabs', 'Usage'],
+  ModalLab: ['Slide Drawers', 'Confirm Dialog', 'Usage'],
+  ProgressGallery: ['Circular Progress', 'Step Progress', 'Spinner With Text', 'Full Page Spinner', 'Usage'],
+  SkeletonGallery: ['Card Skeleton', 'Table Skeleton', 'List Skeleton', 'Usage'],
+  TooltipGallery: ['Tooltip Positions', 'Popover Triggers', 'Usage'],
+  DaneshIcons: ['Quick Links', 'Icon Showcase', 'Usage', 'Integration'],
+  Developer: ['About', 'Quick Stats', 'Projects', 'Connect'],
 };
 
 const SidebarItem = ({ id, activeTab, setActiveTab, setMobileMenuOpen, icon: Icon, label, subItems }) => {
@@ -334,11 +462,31 @@ export default function App() {
       case 'Kbd': return <KbdDoc />;
       case 'EmptyState': return <EmptyStateDoc />;
       case 'Toast': return <ToastDoc />;
+      case 'PasswordInput': return <PasswordInputDoc />;
+      case 'SearchInput': return <SearchInputDoc />;
+      case 'TagInput': return <TagInputDoc />;
+      case 'OtpInput': return <OtpInputDoc />;
 
       case 'Templates': return <TemplatesDoc />;
       case 'AnimatedVault': return <AnimatedVault />;
       case 'SyncLab': return <SyncLab />;
       case 'FioriButtons': return <FioriButtons />;
+      case 'FloatingLab': return <FloatingLabDoc />;
+      case 'InputMasks': return <InputMasksDoc />;
+      case 'SmartInputs': return <SmartInputsDoc />;
+      case 'PhoneInput': return <PhoneInputDoc />;
+      case 'FileDropzone': return <FileDropzoneDoc />;
+
+      case 'CardLab': return <CardLabDoc />;
+      case 'AlertLab': return <AlertLabDoc />;
+      case 'BadgeLab': return <BadgeLabDoc />;
+      case 'ModalLab': return <ModalLabDoc />;
+      case 'TabsVault': return <TabsVaultDoc />;
+      case 'ProgressGallery': return <ProgressGalleryDoc />;
+      case 'SkeletonGallery': return <SkeletonGalleryDoc />;
+      case 'TooltipGallery': return <TooltipGalleryDoc />;
+      case 'DaneshIcons': return <DaneshIconsDoc />;
+      case 'Developer': return <DeveloperDoc />;
       default: return <IntroductionPage onNavigate={setActiveTab} />;
     }
   };

@@ -1,4 +1,3 @@
-import React from 'react';
 import { clsx } from 'clsx';
 
 const Skeleton = ({ width, height, variant = "rectangular", className = "", lines = 1 }) => {

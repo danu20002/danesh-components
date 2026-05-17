@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { Search, Mail, Lock, Eye, EyeOff, User, Globe, Key } from 'lucide-react';
+import { useState } from 'react';
+import { Search, Mail, Lock, Eye, EyeOff, User, AtSign, Link } from 'lucide-react';
 import Input from '../../lib/components/Input';
 import Button from '../../lib/components/Button';
-import { ComponentPreview, PropsTable, SectionTitle, CodeBlock } from '../DocComponents';
+import { ComponentPreview, PropsTable, SectionTitle, NoteBlock } from '../DocComponents';
 
 const InputDoc = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="space-y-10">
-      {/* Basic */}
       <section>
         <SectionTitle>Basic Input</SectionTitle>
-        <p className="text-sm text-slate-500 mb-6">A simple text input with a label.</p>
         <ComponentPreview
           title="Default Input"
           code={`import { Input } from '@danesh-ui/react';
@@ -27,7 +25,6 @@ const InputDoc = () => {
         </ComponentPreview>
       </section>
 
-      {/* With Icons */}
       <section>
         <SectionTitle>With Icons</SectionTitle>
         <ComponentPreview
@@ -46,7 +43,6 @@ const InputDoc = () => {
         </ComponentPreview>
       </section>
 
-      {/* Sizes */}
       <section>
         <SectionTitle>Sizes</SectionTitle>
         <ComponentPreview
@@ -63,7 +59,22 @@ const InputDoc = () => {
         </ComponentPreview>
       </section>
 
-      {/* Error & Hint */}
+      <section>
+        <SectionTitle>Input Types</SectionTitle>
+        <ComponentPreview
+          title="HTML5 Input Types"
+          code={`<Input label="Email" type="email" placeholder="email@example.com" icon={AtSign} />
+<Input label="Website" type="url" placeholder="https://example.com" icon={Link} />
+<Input label="Search" type="search" placeholder="Search..." icon={Search} />`}
+        >
+          <div className="w-full max-w-sm space-y-4">
+            <Input label="Email" type="email" placeholder="email@example.com" icon={AtSign} />
+            <Input label="Website" type="url" placeholder="https://example.com" icon={Link} />
+            <Input label="Search" type="search" placeholder="Search..." icon={Search} />
+          </div>
+        </ComponentPreview>
+      </section>
+
       <section>
         <SectionTitle>Validation States</SectionTitle>
         <ComponentPreview
@@ -87,36 +98,65 @@ const InputDoc = () => {
         </ComponentPreview>
       </section>
 
-      {/* Disabled & Required */}
       <section>
-        <SectionTitle>Disabled & Required</SectionTitle>
+        <SectionTitle>Right Icon</SectionTitle>
+        <ComponentPreview
+          title="Icon Right"
+          code={`const [visible, setVisible] = useState(false);
+
+<Input 
+  label="Password"
+  type={visible ? 'text' : 'password'}
+  icon={Lock}
+  iconRight={visible ? EyeOff : Eye}
+  placeholder="••••••••"
+/>`}
+        >
+          <div className="w-full max-w-sm space-y-4">
+            <Input
+              label="Password"
+              type={showPassword ? 'text' : 'password'}
+              icon={Lock}
+              iconRight={showPassword ? EyeOff : Eye}
+              placeholder="••••••••"
+              onClickIconRight={() => setShowPassword(!showPassword)}
+            />
+          </div>
+        </ComponentPreview>
+      </section>
+
+      <section>
+        <SectionTitle>Disabled & Read Only</SectionTitle>
         <ComponentPreview
           title="States"
           code={`<Input label="Disabled Input" placeholder="Cannot edit" disabled />
+<Input label="Read Only" value="Pre-filled value" readOnly />
 <Input label="Required Field" placeholder="Must fill in" required />`}
         >
           <div className="w-full max-w-sm space-y-4">
             <Input label="Disabled Input" placeholder="Cannot edit" disabled />
+            <Input label="Read Only" value="Pre-filled value" readOnly />
             <Input label="Required Field" placeholder="Must fill in" required />
           </div>
         </ComponentPreview>
       </section>
 
-      {/* Form Example */}
       <section>
         <SectionTitle>Form Example</SectionTitle>
         <ComponentPreview
           title="Login Form"
           code={`import { Input, Button } from '@danesh-ui/react';
-import { Mail, Lock } from 'lucide-react';
+import { Mail, Lock, User } from 'lucide-react';
 
-<div className="space-y-4">
+<div className="max-w-sm space-y-4 p-6 border rounded-2xl">
+  <Input label="Full Name" placeholder="Alex Danesh" icon={User} />
   <Input label="Email" placeholder="alex@danesh.com" icon={Mail} />
   <Input label="Password" type="password" placeholder="••••••••" icon={Lock} />
-  <Button className="w-full">Sign In</Button>
+  <Button className="w-full">Sign In to Dashboard</Button>
 </div>`}
         >
-          <div className="w-full max-w-sm space-y-4">
+          <div className="w-full max-w-sm space-y-4 p-6 border theme-border-secondary rounded-2xl theme-bg-card">
+            <Input label="Full Name" placeholder="Alex Danesh" icon={User} />
             <Input label="Email" placeholder="alex@danesh.com" icon={Mail} />
             <Input label="Password" type="password" placeholder="••••••••" icon={Lock} />
             <Button className="w-full">Sign In to Dashboard</Button>
@@ -124,7 +164,55 @@ import { Mail, Lock } from 'lucide-react';
         </ComponentPreview>
       </section>
 
-      {/* API */}
+      <section>
+        <SectionTitle>Input Group Layout</SectionTitle>
+        <ComponentPreview
+          title="Side-by-Side"
+          code={`<div className="flex gap-3">
+  <div className="flex-1">
+    <Input label="First Name" placeholder="John" />
+  </div>
+  <div className="flex-1">
+    <Input label="Last Name" placeholder="Doe" />
+  </div>
+</div>
+<div className="flex gap-3">
+  <div className="w-24">
+    <Input label="Age" type="number" placeholder="25" />
+  </div>
+  <div className="flex-1">
+    <Input label="Occupation" placeholder="Engineer" icon={User} />
+  </div>
+</div>`}
+        >
+          <div className="w-full max-w-sm space-y-4">
+            <div className="flex gap-3">
+              <div className="flex-1">
+                <Input label="First Name" placeholder="John" />
+              </div>
+              <div className="flex-1">
+                <Input label="Last Name" placeholder="Doe" />
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <div className="w-24">
+                <Input label="Age" type="number" placeholder="25" />
+              </div>
+              <div className="flex-1">
+                <Input label="Occupation" placeholder="Engineer" icon={User} />
+              </div>
+            </div>
+          </div>
+        </ComponentPreview>
+      </section>
+
+      <section>
+        <SectionTitle>Dark Mode Compatible</SectionTitle>
+        <NoteBlock type="tip">
+          All Input components automatically adapt to dark mode using CSS variables. The border, background, text, and placeholder colors transition smoothly when the theme is toggled.
+        </NoteBlock>
+      </section>
+
       <section>
         <SectionTitle>API Reference</SectionTitle>
         <PropsTable props={[
@@ -136,6 +224,8 @@ import { Mail, Lock } from 'lucide-react';
           { name: 'size', type: '"sm" | "md" | "lg"', default: '"md"', description: 'Input size' },
           { name: 'required', type: 'boolean', default: 'false', description: 'Shows asterisk on label' },
           { name: 'disabled', type: 'boolean', default: 'false', description: 'Disables the input' },
+          { name: 'readOnly', type: 'boolean', default: 'false', description: 'Makes input read-only' },
+          { name: 'type', type: 'string', default: '"text"', description: 'HTML input type' },
         ]} />
       </section>
     </div>

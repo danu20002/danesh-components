@@ -1,4 +1,3 @@
-import React from 'react';
 import Textarea from '../../lib/components/Textarea';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 

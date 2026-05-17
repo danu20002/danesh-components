@@ -1,4 +1,3 @@
-import React from 'react';
 import Accordion from '../../lib/components/Accordion';
 import { HelpCircle, Shield, Zap } from 'lucide-react';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';

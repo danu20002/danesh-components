@@ -1,4 +1,3 @@
-import React from 'react';
 import Divider from '../../lib/components/Divider';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 

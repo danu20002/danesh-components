@@ -1,4 +1,3 @@
-import React from 'react';
 import { clsx } from 'clsx';
 
 const Badge = ({ children, variant = "default", size = "md", dot = false, className = "" }) => {

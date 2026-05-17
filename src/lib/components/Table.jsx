@@ -1,4 +1,3 @@
-import React from 'react';
 import { clsx } from 'clsx';
 
 const Table = ({ columns = [], data = [], striped = false, hoverable = true, compact = false, className = "" }) => {

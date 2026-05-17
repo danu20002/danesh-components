@@ -1,4 +1,3 @@
-import React from 'react';
 import { clsx } from 'clsx';
 
 const Divider = ({ label, className = "", orientation = "horizontal" }) => {

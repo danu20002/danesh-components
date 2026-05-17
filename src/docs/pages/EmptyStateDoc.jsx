@@ -1,4 +1,3 @@
-import React from 'react';
 import EmptyState from '../../lib/components/EmptyState';
 import Button from '../../lib/components/Button';
 import { Search, Plus, FolderOpen } from 'lucide-react';

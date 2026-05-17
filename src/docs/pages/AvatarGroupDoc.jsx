@@ -1,4 +1,3 @@
-import React from 'react';
 import Avatar from '../../lib/components/Avatar';
 import AvatarGroup from '../../lib/components/AvatarGroup';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';

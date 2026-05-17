@@ -1,4 +1,3 @@
-import React from 'react';
 import { clsx } from 'clsx';
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 

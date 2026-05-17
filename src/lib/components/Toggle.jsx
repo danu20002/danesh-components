@@ -1,4 +1,3 @@
-import React from 'react';
 import { clsx } from 'clsx';
 
 const Toggle = ({ checked = false, onChange, label, size = "md", disabled = false }) => {

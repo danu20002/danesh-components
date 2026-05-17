@@ -1,13 +1,16 @@
-import React from 'react';
 import { MoreHorizontal, TrendingUp, Zap } from 'lucide-react';
 import Card from '../../lib/components/Card';
 import Button from '../../lib/components/Button';
 import Badge from '../../lib/components/Badge';
-import { ComponentPreview, PropsTable, SectionTitle } from '../DocComponents';
+import { ComponentPreview, PropsTable, SectionTitle, NoteBlock } from '../DocComponents';
 
 const CardDoc = () => {
   return (
     <div className="space-y-10">
+      <NoteBlock type="tip">
+        Explore our <strong>Card Lab</strong> for advanced card variants like Glass, Interactive, Metric, Pricing, Expandable, and Profile cards.
+      </NoteBlock>
+
       {/* Basic */}
       <section>
         <SectionTitle>Basic Card</SectionTitle>
@@ -17,16 +20,16 @@ const CardDoc = () => {
 
 <Card title="Revenue Summary" subtitle="Updated 2 mins ago">
   <div className="h-24 flex flex-col justify-center">
-    <h2 className="text-3xl font-bold text-slate-900">$42,500.00</h2>
-    <p className="text-sm text-emerald-600 font-medium">+12.5% from last month</p>
+    <h2 className="text-3xl font-bold theme-text">$42,500.00</h2>
+    <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">+12.5% from last month</p>
   </div>
 </Card>`}
         >
           <div className="w-full max-w-md">
             <Card title="Revenue Summary" subtitle="Updated 2 mins ago">
               <div className="h-24 flex flex-col justify-center">
-                <h2 className="text-3xl font-bold text-slate-900">$42,500.00</h2>
-                <p className="text-sm text-emerald-600 font-medium">+12.5% from last month</p>
+                <h2 className="text-3xl font-bold theme-text">$42,500.00</h2>
+                <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">+12.5% from last month</p>
               </div>
             </Card>
           </div>
@@ -43,7 +46,7 @@ const CardDoc = () => {
   subtitle="Jan 2024"
   footer={<Button size="sm" variant="ghost">View Full Report</Button>}
 >
-  <p className="text-sm text-slate-600">
+  <p className="text-sm theme-text-secondary">
     Total orders: 1,248 | Revenue: $89,340
   </p>
 </Card>`}
@@ -54,7 +57,7 @@ const CardDoc = () => {
               subtitle="Jan 2024"
               footer={<Button size="sm" variant="ghost">View Full Report</Button>}
             >
-              <p className="text-sm text-slate-600">
+              <p className="text-sm theme-text-secondary">
                 Total orders: 1,248 | Revenue: $89,340
               </p>
             </Card>
@@ -74,7 +77,7 @@ const CardDoc = () => {
     <Button size="xs" variant="ghost" icon={MoreHorizontal} />
   }
 >
-  <p className="text-sm text-slate-600">Manage your team and permissions.</p>
+  <p className="text-sm theme-text-secondary">Manage your team and permissions.</p>
 </Card>`}
         >
           <div className="w-full max-w-md">
@@ -85,7 +88,7 @@ const CardDoc = () => {
                 <Button size="xs" variant="ghost" icon={MoreHorizontal} />
               }
             >
-              <p className="text-sm text-slate-600">Manage your team and permissions.</p>
+              <p className="text-sm theme-text-secondary">Manage your team and permissions.</p>
             </Card>
           </div>
         </ComponentPreview>
@@ -97,7 +100,7 @@ const CardDoc = () => {
         <ComponentPreview
           title="Hoverable Cards"
           code={`<Card hover title="Hover me!">
-  <p className="text-sm text-slate-600">
+  <p className="text-sm theme-text-secondary">
     I have a subtle lift effect on hover.
   </p>
 </Card>`}
@@ -106,14 +109,14 @@ const CardDoc = () => {
             <Card hover title="Analytics" subtitle="Real-time">
               <div className="flex items-center gap-2">
                 <TrendingUp size={20} className="text-emerald-500" />
-                <span className="text-2xl font-bold text-slate-900">2,845</span>
+                <span className="text-2xl font-bold theme-text">2,845</span>
                 <Badge variant="success" size="sm">+8.2%</Badge>
               </div>
             </Card>
             <Card hover title="Performance" subtitle="Last 24h">
               <div className="flex items-center gap-2">
                 <Zap size={20} className="text-amber-500" />
-                <span className="text-2xl font-bold text-slate-900">99.8%</span>
+                <span className="text-2xl font-bold theme-text">99.8%</span>
                 <Badge variant="success" size="sm">Uptime</Badge>
               </div>
             </Card>

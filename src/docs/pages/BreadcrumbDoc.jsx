@@ -1,4 +1,3 @@
-import React from 'react';
 import Breadcrumb from '../../lib/components/Breadcrumb';
 import { Home, Folder, FileText } from 'lucide-react';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';

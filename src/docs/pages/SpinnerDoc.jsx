@@ -1,4 +1,3 @@
-import React from 'react';
 import Spinner from '../../lib/components/Spinner';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 

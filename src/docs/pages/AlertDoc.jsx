@@ -1,14 +1,17 @@
-import React from 'react';
 import Alert from '../../lib/components/Alert';
-import { ComponentPreview, PropsTable, SectionTitle, CodeBlock } from '../DocComponents';
+import { ComponentPreview, PropsTable, SectionTitle, NoteBlock } from '../DocComponents';
 
 const AlertDoc = () => {
   return (
     <div className="space-y-10">
+      <NoteBlock type="tip">
+        Check out the <strong>Alert Lab</strong> for advanced alert components like banners, stacked alerts, and action-oriented alerts.
+      </NoteBlock>
+
       {/* Variants */}
       <section>
         <SectionTitle>Variants</SectionTitle>
-        <p className="text-sm text-slate-500 mb-6">Four semantic variants with auto-matching icons for quick feedback communication.</p>
+        <p className="text-sm theme-text-secondary mb-6">Four semantic variants with auto-matching icons for quick feedback communication.</p>
         <ComponentPreview
           title="All Variants"
           code={`import { Alert } from '@danesh-ui/react';
@@ -49,7 +52,7 @@ const AlertDoc = () => {
       {/* Dismissible */}
       <section>
         <SectionTitle>Dismissible</SectionTitle>
-        <p className="text-sm text-slate-500 mb-6">Add a close button with the <code className="text-xs bg-slate-100 px-1.5 py-0.5 rounded font-mono">dismissible</code> prop.</p>
+        <p className="text-sm theme-text-secondary mb-6">Add a close button with the <code className="text-xs theme-bg-tertiary px-1.5 py-0.5 rounded font-mono theme-text">dismissible</code> prop.</p>
         <ComponentPreview
           title="Dismissible Alerts"
           code={`<Alert variant="info" title="Tip" dismissible>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '../../lib/components/Button';
 import { toast } from '../../lib/components/Toast';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock, NoteBlock } from '../DocComponents';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { clsx } from 'clsx';
 
 const Card = ({ title, subtitle, children, footer, actions, className = "", hover = false, ...props }) => (

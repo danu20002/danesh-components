@@ -1,4 +1,3 @@
-import React from 'react';
 import { clsx } from 'clsx';
 
 const Progress = ({ value = 0, max = 100, size = "md", variant = "primary", label, showValue = false, className = "" }) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   Check, X, AlertTriangle, 
   Settings, Bell, Plus, Trash2, Download, 
