@@ -1,10 +1,11 @@
-import { useRef, useEffect, useMemo } from 'react';
-import { ExternalLink, MapPin, Mail, Briefcase, Code, Star, Globe, Palette, Layers, Smartphone, GitFork, Calendar, Award, Building, Users, ChartBarIncreasing, Database, Brain, Server, Sparkles } from 'lucide-react';
+import { useRef, useEffect, useMemo, useState } from 'react';
+import { ExternalLink, MapPin, Mail, Briefcase, Code, Star, Globe, Palette, Layers, Smartphone, GitFork, Calendar, Award, Building, Users, ChartBarIncreasing, Database, Brain, Server, Sparkles, Package, Download, Clock } from 'lucide-react';
 import Button from '../../lib/components/Button';
 import Badge from '../../lib/components/Badge';
 import GlassCard from '../../lib/components/GlassCard';
 import MetricCard from '../../lib/components/MetricCard';
 import InteractiveCard from '../../lib/components/InteractiveCard';
+import { clsx } from 'clsx';
 import { SectionTitle, NoteBlock } from '../DocComponents';
 
 const TiltWrapper = ({ children, className }) => {
@@ -113,6 +114,136 @@ const Particles = () => {
           50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.3; }
         }
       `}</style>
+    </div>
+  );
+};
+
+const PACKAGES = [
+  {
+    registry: 'danesh-ui',
+    name: 'danesh-ui',
+    color: 'from-amber-500 to-orange-600',
+    bg: 'bg-amber-100 dark:bg-amber-900/30',
+    iconColor: 'text-amber-600 dark:text-amber-400',
+    npmUrl: 'https://www.npmjs.com/package/danesh-ui',
+  },
+  {
+    registry: 'daneshicons',
+    name: 'daneshicons',
+    color: 'from-emerald-500 to-teal-600',
+    bg: 'bg-emerald-100 dark:bg-emerald-900/30',
+    iconColor: 'text-emerald-600 dark:text-emerald-400',
+    npmUrl: 'https://www.npmjs.com/package/daneshicons',
+  },
+  {
+    registry: 'open-text-editor-latest',
+    name: 'open-text-editor-latest',
+    color: 'from-blue-500 to-cyan-600',
+    bg: 'bg-blue-100 dark:bg-blue-900/30',
+    iconColor: 'text-blue-600 dark:text-blue-400',
+    npmUrl: 'https://www.npmjs.com/package/open-text-editor-latest',
+  },
+  {
+    registry: '@daneshnaik%2Frich-text-editor',
+    name: '@daneshnaik/rich-text-editor',
+    color: 'from-violet-500 to-purple-600',
+    bg: 'bg-violet-100 dark:bg-violet-900/30',
+    iconColor: 'text-violet-600 dark:text-violet-400',
+    npmUrl: 'https://www.npmjs.com/package/@daneshnaik/rich-text-editor',
+  },
+];
+
+const timeAgo = (dateStr) => {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins} min ago`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `${hrs} hour${hrs > 1 ? 's' : ''} ago`;
+  const days = Math.floor(hrs / 24);
+  if (days < 30) return `${days} day${days > 1 ? 's' : ''} ago`;
+  const months = Math.floor(days / 30);
+  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
+  const years = Math.floor(months / 12);
+  return `${years} year${years > 1 ? 's' : ''} ago`;
+};
+
+const PackagesGrid = () => {
+  const [packages, setPackages] = useState(PACKAGES.map(p => ({ ...p, loading: true, version: '', desc: '', time: '' })));
+
+  useEffect(() => {
+    let cancelled = false;
+    PACKAGES.forEach(async (pkg, i) => {
+      try {
+        const res = await fetch(`https://registry.npmjs.org/${pkg.registry}`);
+        if (!res.ok) throw new Error('fetch failed');
+        const data = await res.json();
+        if (cancelled) return;
+        const latestVer = data['dist-tags']?.latest || '';
+        const pubTime = data.time?.[latestVer] || '';
+        setPackages(prev => {
+          const next = [...prev];
+          next[i] = { ...next[i], loading: false, version: latestVer, desc: data.description || '', time: pubTime ? timeAgo(pubTime) : '' };
+          return next;
+        });
+      } catch {
+        if (cancelled) return;
+        setPackages(prev => {
+          const next = [...prev];
+          next[i] = { ...next[i], loading: false, version: '—', desc: 'Could not load package info', time: '' };
+          return next;
+        });
+      }
+    });
+    return () => { cancelled = true; };
+  }, []);
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {packages.map((pkg, i) => (
+        <InteractiveCard key={i} effect="border" className="p-5">
+          <div className="flex items-start gap-4">
+            <div className={clsx('w-12 h-12 rounded-xl flex items-center justify-center shrink-0', pkg.bg)}>
+              <Package size={22} className={pkg.iconColor} />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-2 flex-wrap">
+                <h3 className="font-bold theme-text text-sm font-mono">{pkg.name}</h3>
+                {pkg.loading ? (
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-slate-200 dark:bg-zinc-700 text-slate-400 dark:text-zinc-500 animate-pulse">loading</span>
+                ) : (
+                  <span className={clsx('text-[10px] font-bold px-1.5 py-0.5 rounded-md', 'bg-gradient-to-r text-white', pkg.color)}>
+                    v{pkg.version}
+                  </span>
+                )}
+              </div>
+              <p className={clsx('text-xs mt-1.5 leading-relaxed', pkg.loading ? 'theme-text-tertiary animate-pulse' : 'theme-text-secondary')}>
+                {pkg.loading ? 'Fetching package info...' : pkg.desc}
+              </p>
+              <div className="flex items-center gap-3 mt-3 text-[11px] theme-text-tertiary">
+                <span className="flex items-center gap-1">
+                  <Download size={11} />
+                  {pkg.name.startsWith('@') ? '@daneshnaik' : 'daneshnaik'}
+                </span>
+                {!pkg.loading && pkg.time && (
+                  <span className="flex items-center gap-1">
+                    <Clock size={11} />
+                    {pkg.time}
+                  </span>
+                )}
+              </div>
+              <a
+                href={pkg.npmUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 mt-3 text-xs font-semibold text-[#E31B23] hover:underline relative z-10"
+              >
+                <Package size={12} /> View on npm <ExternalLink size={10} />
+              </a>
+            </div>
+          </div>
+        </InteractiveCard>
+      ))}
     </div>
   );
 };
@@ -402,10 +533,16 @@ const DeveloperDoc = () => {
                 Modern React UI component library with glassmorphism, vault variants, SAP Fiori enterprise components,
                 and 25+ production-ready components. Built with Tailwind CSS v4 and React 19.
               </p>
-              <a href="https://github.com/danu20002/danesh-components" target="_blank" rel="noopener noreferrer"
-                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E31B23] hover:underline">
-                <GitFork size={14} /> View on GitHub <ExternalLink size={12} />
-              </a>
+              <div className="flex items-center gap-3">
+                <a href="https://danesh-components.vercel.app/" target="_blank" rel="noopener noreferrer"
+                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E31B23] hover:underline">
+                  <Globe size={14} /> danesh-components.vercel.app <ExternalLink size={12} />
+                </a>
+                <a href="https://github.com/danu20002/danesh-components" target="_blank" rel="noopener noreferrer"
+                   className="inline-flex items-center gap-1.5 text-xs font-semibold theme-text-tertiary hover:theme-text transition-colors">
+                  <GitFork size={14} /> GitHub <ExternalLink size={12} />
+                </a>
+              </div>
             </InteractiveCard>
 
             <InteractiveCard effect="glow" className="p-6">
@@ -476,6 +613,15 @@ const DeveloperDoc = () => {
             </InteractiveCard>
 
           </div>
+        </section>
+
+        {/* Packages */}
+        <section>
+          <SectionTitle>Published Packages</SectionTitle>
+          <p className="theme-text-secondary text-sm mb-6">
+            Open-source npm packages I maintain for the developer community.
+          </p>
+          <PackagesGrid />
         </section>
 
         {/* Connect */}

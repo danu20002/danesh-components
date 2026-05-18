@@ -94,3 +94,7 @@ export { default as FullPageSpinner } from './components/FullPageSpinner';
 
 // Tooltip / Popover Family
 export { default as Popover } from './components/Popover';
+
+// Data Display — Advanced
+export { default as OrgChart, VerticalOrgChart, HorizontalOrgChart } from './components/OrgChart';
+export { default as OrgChartSidebar, VerticalOrgChartSidebar, HorizontalOrgChartSidebar } from './components/OrgChartSidebar';

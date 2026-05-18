@@ -1,0 +1,233 @@
+{
+  "id": "1",
+  "name": "Ananya Sharma",
+  "role": "Chief Executive Officer",
+  "department": "Executive",
+  "email": "ananya.sharma@talentcorp.com",
+  "phone": "+91 98765 43210",
+  "location": "Bengaluru, India",
+  "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop",
+  "skills": ["Leadership", "Strategic Planning", "Venture Capital"],
+  "bio": "Ananya has over 20 years of experience scaling technology giants across global markets.",
+  "reportsCount": 99,
+  "children": [
+    {
+      "id": "2",
+      "name": "Rohan Verma",
+      "role": "VP of Engineering",
+      "department": "Engineering",
+      "email": "rohan.verma@talentcorp.com",
+      "phone": "+91 98765 43211",
+      "location": "Bengaluru, India",
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=150&auto=format&fit=crop",
+      "skills": ["Distributed Systems", "Cloud Architecture", "Scaling Teams"],
+      "bio": "Rohan leads our global technology team, driving cloud-native architecture solutions.",
+      "reportsCount": 98,
+      "children": [
+        {
+          "id": "3",
+          "name": "Priya Patel",
+          "role": "Engineering Manager (FE)",
+          "department": "Engineering",
+          "email": "priya.patel@talentcorp.com",
+          "phone": "+91 98765 43214",
+          "location": "Pune, India",
+          "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=150&auto=format&fit=crop",
+          "skills": ["React", "Next.js", "UI Engineering"],
+          "bio": "Priya focuses on high-performance frontends and developer experience tools.",
+          "reportsCount": 29,
+          "children": [
+            {
+              "id": "3-1",
+              "name": "Amit Shah",
+              "role": "Senior React Developer",
+              "department": "Engineering",
+              "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop",
+              "location": "Mumbai, India",
+              "skills": ["TypeScript", "TailwindCSS"],
+              "bio": "Amit builds core UI library interfaces."
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "name": "Janani Arvind",
+          "role": "Group Director",
+          "department": "Engineering",
+          "email": "janani.arvind@talentcorp.com",
+          "phone": "+91 98765 43215",
+          "location": "Bengaluru, India",
+          "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop",
+          "skills": ["Microservices", "Kubernetes", "API Design"],
+          "bio": "Janani orchestrates core platform scalability and microservices.",
+          "reportsCount": 16,
+          "children": [
+            {
+              "id": "4-1",
+              "name": "Vignesh TK",
+              "role": "Architect",
+              "department": "Engineering",
+              "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=150&auto=format&fit=crop",
+              "location": "Chennai, India",
+              "skills": ["System Design", "Go", "NoSQL"],
+              "reportsCount": 1,
+              "children": [
+                {
+                  "id": "4-1-1",
+                  "name": "Suresh Kumar",
+                  "role": "Junior Engineer",
+                  "department": "Engineering",
+                  "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=150&auto=format&fit=crop",
+                  "location": "Kochi, India"
+                }
+              ]
+            },
+            {
+              "id": "4-2",
+              "name": "Janani Arvind",
+              "role": "Architect",
+              "department": "Engineering",
+              "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop",
+              "location": "Bengaluru, India",
+              "skills": ["Scala", "Kafka"]
+            },
+            {
+              "id": "4-3",
+              "name": "Rinzee Wilma",
+              "role": "Architect",
+              "department": "Engineering",
+              "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=150&auto=format&fit=crop",
+              "location": "Noida, India",
+              "skills": ["DevOps", "AWS"]
+            },
+            {
+              "id": "4-4",
+              "name": "Kavin Edwards",
+              "role": "Delivery Head",
+              "department": "Engineering",
+              "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop",
+              "location": "Hyderabad, India",
+              "skills": ["Project Management", "Agile"]
+            },
+            {
+              "id": "4-5",
+              "name": "Anitha Joshi",
+              "role": "Delivery Head",
+              "department": "Engineering",
+              "avatar": "https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=150&auto=format&fit=crop",
+              "location": "Pune, India",
+              "skills": ["Scrum", "Delivery Management"]
+            },
+            {
+              "id": "4-6",
+              "name": "Tina smith",
+              "role": "Delivery Head",
+              "department": "Engineering",
+              "avatar": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=150&auto=format&fit=crop",
+              "location": "Kolkata, India",
+              "skills": ["SRE", "CI/CD"]
+            },
+            {
+              "id": "4-7",
+              "name": "Espartaco Elizabeth",
+              "role": "Senior Software Engineer",
+              "department": "Engineering",
+              "avatar": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=150&auto=format&fit=crop",
+              "location": "Bengaluru, India",
+              "skills": ["React Native", "Mobile Security"],
+              "reportsCount": 8,
+              "children": [
+                {
+                  "id": "4-7-1",
+                  "name": "Taylor Beth",
+                  "role": "Software Engineer",
+                  "department": "Engineering",
+                  "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop",
+                  "location": "Delhi, India",
+                  "skills": ["JavaScript", "HTML5"]
+                },
+                {
+                  "id": "4-7-2",
+                  "name": "Clark Elsie",
+                  "role": "Software Engineer",
+                  "department": "Engineering",
+                  "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop",
+                  "location": "Bengaluru, India",
+                  "skills": ["TypeScript", "Sass"]
+                },
+                {
+                  "id": "4-7-3",
+                  "name": "Rodriguez Sue",
+                  "role": "Software Engineer",
+                  "department": "Engineering",
+                  "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop",
+                  "location": "Pune, India",
+                  "skills": ["NodeJS", "Express"]
+                },
+                {
+                  "id": "4-7-4",
+                  "name": "Lewis Alma",
+                  "role": "Software Engineer",
+                  "department": "Engineering",
+                  "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=150&auto=format&fit=crop",
+                  "location": "Hyderabad, India",
+                  "skills": ["Docker", "NoSQL"]
+                },
+                {
+                  "id": "4-7-5",
+                  "name": "Lee Vanessa",
+                  "role": "Software Engineer",
+                  "department": "Engineering",
+                  "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop",
+                  "location": "Bengaluru, India",
+                  "skills": ["Angular", "RxJS"]
+                },
+                {
+                  "id": "4-7-6",
+                  "name": "Walker Kristen",
+                  "role": "Account Manager",
+                  "department": "Marketing",
+                  "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=150&auto=format&fit=crop",
+                  "location": "Mumbai, India",
+                  "skills": ["B2B Relations", "Negotiation"]
+                },
+                {
+                  "id": "4-7-7",
+                  "name": "Allen Katie",
+                  "role": "Software Engineer",
+                  "department": "Engineering",
+                  "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop",
+                  "location": "Bengaluru, India",
+                  "skills": ["Rust", "WebAssembly"]
+                },
+                {
+                  "id": "4-7-8",
+                  "name": "Young Laurie",
+                  "role": "Software Engineer",
+                  "department": "Engineering",
+                  "avatar": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=150&auto=format&fit=crop",
+                  "location": "Kolkata, India",
+                  "skills": ["React", "Redux"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "name": "Kabir Mehta",
+          "role": "Engineering Manager (BE)",
+          "department": "Engineering",
+          "email": "kabir.mehta@talentcorp.com",
+          "phone": "+91 98765 43216",
+          "location": "Hyderabad, India",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop",
+          "skills": ["Go", "Kubernetes", "gRPC"],
+          "bio": "Kabir builds fault-tolerant, high-throughput microservice pipelines.",
+          "reportsCount": 50,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

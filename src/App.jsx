@@ -65,6 +65,7 @@ import SkeletonGalleryDoc from './docs/pages/SkeletonGalleryDoc';
 import TooltipGalleryDoc from './docs/pages/TooltipGalleryDoc';
 import DaneshIconsDoc from './docs/pages/DaneshIconsDoc';
 import DeveloperDoc from './docs/pages/DeveloperDoc';
+import OrgChartDoc from './docs/pages/OrgChartDoc';
 
 // Library Components
 import Badge from './lib/components/Badge';
@@ -196,6 +197,7 @@ const NAV_SECTIONS = [
     title: 'Data & Navigation',
     items: [
       { id: 'Table', icon: TableIcon, label: 'Table' },
+      { id: 'OrgChart', icon: Users, label: 'Org Chart', premium: true },
       { id: 'Stat', icon: Database, label: 'Stat' },
       { id: 'AvatarGroup', icon: Users, label: 'Avatar Group' },
       { id: 'Breadcrumb', icon: Map, label: 'Breadcrumb' },
@@ -263,6 +265,7 @@ const PAGE_DESCRIPTIONS = {
   Drawer: "Slide-in panels for settings, navigation, and detailed content views.",
   DaneshIcons: "200+ premium SVG icons designed for the Danesh design system. Open source and fully customizable.",
   Developer: "Meet the creator behind Danesh'UI — full stack developer, UI/UX designer, and open source enthusiast.",
+  OrgChart: "Interactive organizational chart with hierarchical tree visualization, search, zoom, and custom card rendering.",
 };
 
 const PAGE_TOC = {
@@ -298,9 +301,10 @@ const PAGE_TOC = {
   TooltipGallery: ['Tooltip Positions', 'Popover Triggers', 'Usage'],
   DaneshIcons: ['Quick Links', 'Icon Showcase', 'Usage', 'Integration'],
   Developer: ['About', 'Quick Stats', 'Projects', 'Connect'],
+  OrgChart: ['Basic Org Chart', 'Search & Filter', 'Zoom & Pan', 'Custom Card', 'Interaction & Events', 'API Reference', 'Data Structure', 'from Danesh'],
 };
 
-const SidebarItem = ({ id, activeTab, setActiveTab, setMobileMenuOpen, icon: Icon, label, subItems }) => {
+const SidebarItem = ({ id, activeTab, setActiveTab, setMobileMenuOpen, icon: Icon, label, subItems, premium }) => {
   const isParentActive = activeTab === id || subItems?.some(sub => sub.id === activeTab);
   const [isOpen, setIsOpen] = useState(isParentActive);
 
@@ -320,19 +324,34 @@ const SidebarItem = ({ id, activeTab, setActiveTab, setMobileMenuOpen, icon: Ico
           }
         }}
         className={`
-          w-full flex items-center gap-3 px-3.5 py-2 text-[13px] font-medium rounded-xl transition-all duration-200 cursor-pointer theme-transition
+          w-full flex items-center gap-3 px-3.5 py-2 text-[13px] font-medium rounded-xl transition-all duration-200 cursor-pointer theme-transition relative overflow-hidden
+          ${premium ? 'premium-nav-item' : ''}
           ${activeTab === id || (isParentActive && !isOpen)
-            ? 'theme-bg-active theme-text-active theme-shadow-sm' 
-            : 'theme-text-secondary hover:theme-bg-hover hover:theme-text'}
+            ? premium
+              ? 'bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20 text-amber-800 dark:text-amber-300 shadow-sm shadow-amber-200/50 dark:shadow-amber-900/20 border border-amber-200/50 dark:border-amber-800/30'
+              : 'theme-bg-active theme-text-active theme-shadow-sm'
+            : premium
+              ? 'theme-text-secondary hover:bg-amber-50/50 dark:hover:bg-amber-950/10 hover:text-amber-700 dark:hover:text-amber-400 border border-transparent hover:border-amber-200/30 dark:hover:border-amber-800/20'
+              : 'theme-text-secondary hover:theme-bg-hover hover:theme-text'}
         `}
       >
-        <Icon size={16} className={isParentActive ? 'theme-text-active' : 'theme-text-tertiary'} strokeWidth={isParentActive ? 2.5 : 2} />
-        <span className="truncate">{label}</span>
-        {subItems ? (
-          <ChevronDown size={14} className={`ml-auto transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
-        ) : (
-          activeTab === id && <ChevronRight size={12} className="ml-auto opacity-50" />
+        {premium && (
+          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-300/10 to-transparent -skew-x-12 animate-shimmer pointer-events-none" />
         )}
+        <div className="relative flex items-center gap-3 w-full">
+          <Icon size={16} className={isParentActive ? 'theme-text-active' : 'theme-text-tertiary'} strokeWidth={isParentActive ? 2.5 : 2} />
+          <span className="truncate">{label}</span>
+          {premium && (
+            <span className="ml-auto text-[9px] font-black uppercase tracking-wider bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(251,191,36,0.3)] animate-pulse-subtle">
+              ✦ Premium
+            </span>
+          )}
+          {subItems ? (
+            <ChevronDown size={14} className={`ml-auto transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+          ) : (
+            activeTab === id && <ChevronRight size={12} className="ml-auto opacity-50" />
+          )}
+        </div>
       </button>
 
       {subItems && isOpen && (
@@ -487,6 +506,7 @@ export default function App() {
       case 'TooltipGallery': return <TooltipGalleryDoc />;
       case 'DaneshIcons': return <DaneshIconsDoc />;
       case 'Developer': return <DeveloperDoc />;
+      case 'OrgChart': return <OrgChartDoc />;
       default: return <IntroductionPage onNavigate={setActiveTab} />;
     }
   };
