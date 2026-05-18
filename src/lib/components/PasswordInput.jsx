@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { clsx } from 'clsx';
-import { Eye, EyeOff, Copy, Check } from 'lucide-react';
+import { Eye, EyeOff, Copy, Check } from 'daneshicons';
 
 const strengthConfig = [
   { label: 'Weak', color: 'bg-red-500', text: 'text-red-500', bars: 1 },

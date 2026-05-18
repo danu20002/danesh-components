@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { clsx } from 'clsx';
-import { X } from 'lucide-react';
+import { X } from 'daneshicons';
 
 const Modal = ({ open, onClose, title, children, footer, size = "md", className = "" }) => {
   const overlayRef = useRef(null);

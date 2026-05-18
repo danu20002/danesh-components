@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
-import { X, Info, CheckCircle2, AlertTriangle, AlertCircle } from 'lucide-react';
+import { X, Info, CheckCircle2, AlertTriangle, AlertCircle } from 'daneshicons';
 
 const variantStyles = {
   info: {

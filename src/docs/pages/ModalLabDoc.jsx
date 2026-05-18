@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Settings, Menu, Bell, ShoppingCart, Trash2 } from 'lucide-react';
+import { Settings, Menu, Bell, ShoppingCart, Trash2 } from 'daneshicons';
 import Drawer from '../../lib/components/Drawer';
 import ConfirmDialog from '../../lib/components/ConfirmDialog';
 import Button from '../../lib/components/Button';
@@ -96,7 +96,7 @@ const ModalLabDoc = () => {
         <CodeBlock
           title="Drawer Example"
           code={`import { Drawer, Button } from '@danesh-ui/react';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart } from 'daneshicons';
 
 const [open, setOpen] = useState(false);
 
@@ -138,7 +138,7 @@ const [open, setOpen] = useState(false);
           <CodeBlock
             title="ConfirmDialog Example"
             code={`import { ConfirmDialog, Button } from '@danesh-ui/react';
-import { Trash2 } from 'lucide-react';
+import { Trash2 } from 'daneshicons';
 
 const [open, setOpen] = useState(false);
 
@@ -171,7 +171,7 @@ const [open, setOpen] = useState(false);
         <CodeBlock
           title="ModalLab.jsx"
           code={`import { Drawer, ConfirmDialog, Button } from '@danesh-ui/react';
-import { ShoppingCart, Trash2 } from 'lucide-react';
+import { ShoppingCart, Trash2 } from 'daneshicons';
 
 // --- Drawer ---
 const [drawerOpen, setDrawerOpen] = useState(false);

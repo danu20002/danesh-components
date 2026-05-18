@@ -5,7 +5,7 @@ import {
   ExternalLink, Bell, Search, RefreshCw, Layers,
   MousePointerClick, Command, Power, Rocket,
   CloudLightning, Shield, Cpu, Terminal, Copy
-} from 'lucide-react';
+} from 'daneshicons';
 import Button from '../../lib/components/Button';
 import { SectionTitle, NoteBlock, CodeBlock } from '../DocComponents';
 

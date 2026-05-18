@@ -1,6 +1,6 @@
 import React from 'react';
 import { clsx } from 'clsx';
-import { User } from 'lucide-react';
+import { User } from 'daneshicons';
 
 const Avatar = ({ src, alt, name, size = "md", status, className = "" }) => {
   const sizes = {

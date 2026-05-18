@@ -1,6 +1,6 @@
 import Tooltip from '../../lib/components/Tooltip';
 import Button from '../../lib/components/Button';
-import { HelpCircle, Info, Settings } from 'lucide-react';
+import { HelpCircle, Info, Settings } from 'daneshicons';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 
 const TooltipDoc = () => {

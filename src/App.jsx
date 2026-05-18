@@ -9,7 +9,7 @@ import {
   Table as TableIcon, Globe, MessageSquare, KeyRound, Search as SearchIcon, Tags, Smartphone,
   TextCursorInput, CreditCard, ShoppingCart, PhoneCall, UploadCloud, CircleDot,
   Gauge, Layers3, AlignJustify, PanelRightOpen
-} from 'lucide-react';
+} from 'daneshicons';
 
 // Doc Pages
 import ButtonDoc from './docs/pages/ButtonDoc';
@@ -759,7 +759,7 @@ function InstallationPage() {
           </div>
           <code className="text-emerald-400 font-mono text-lg block">
             <span className="text-slate-600 mr-4 select-none">$</span>
-            npm install @danesh-ui/react lucide-react clsx tailwind-merge
+            npm install @danesh-ui/react daneshicons clsx tailwind-merge
           </code>
         </div>
       </section>

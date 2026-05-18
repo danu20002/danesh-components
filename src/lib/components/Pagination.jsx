@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
+import { ChevronLeft, ChevronRight, MoreHorizontal } from 'daneshicons';
 
 const Pagination = ({ current = 1, total = 10, onChange, siblings = 1, className = "" }) => {
   const range = (start, end) => {

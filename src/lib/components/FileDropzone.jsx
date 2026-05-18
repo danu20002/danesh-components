@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from 'react';
 import { clsx } from 'clsx';
-import { Upload, File, X, Image, FileText, FileSpreadsheet, FileArchive, FileCode, AlertCircle } from 'lucide-react';
+import { Upload, File, X, Image, FileText, FileSpreadsheet, FileArchive, FileCode, AlertCircle } from 'daneshicons';
 
 const FILE_ICONS = {
   image: Image,

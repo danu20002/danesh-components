@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { TrendingUp, TrendingDown } from 'lucide-react';
+import { TrendingUp, TrendingDown } from 'daneshicons';
 
 const MetricCard = ({ title, value, trend, trendLabel, icon: IconComponent, variant = 'primary', size = 'md', className, ...props }) => {
   const variantColors = {

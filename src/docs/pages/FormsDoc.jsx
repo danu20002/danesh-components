@@ -3,7 +3,7 @@ import Checkbox from '../../lib/components/Checkbox';
 import Radio from '../../lib/components/Radio';
 import Select from '../../lib/components/Select';
 import Textarea from '../../lib/components/Textarea';
-import { Globe } from 'lucide-react';
+import { Globe } from 'daneshicons';
 import { ComponentPreview, PropsTable, SectionTitle } from '../DocComponents';
 
 const FormsDoc = () => {

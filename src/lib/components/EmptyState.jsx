@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { FileX } from 'lucide-react';
+import { FileX } from 'daneshicons';
 
 const EmptyState = ({ 
   icon: Icon = FileX, 

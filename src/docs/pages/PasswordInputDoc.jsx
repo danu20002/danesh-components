@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Lock, Key, Shield } from 'lucide-react';
+import { Lock, Key, Shield } from 'daneshicons';
 import PasswordInput from '../../lib/components/PasswordInput';
 import { ComponentPreview, PropsTable, SectionTitle } from '../DocComponents';
 
@@ -30,7 +30,7 @@ const PasswordInputDoc = () => {
         <ComponentPreview
           title="Password Strength"
           code={`import { PasswordInput } from '@danesh-ui/react';
-import { Key } from 'lucide-react';
+import { Key } from 'daneshicons';
 
 <PasswordInput
   label="Create Password"

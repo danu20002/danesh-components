@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Bell, Mail, Zap, MessageSquare, Heart, Star, Check, Copy } from 'lucide-react';
+import { Bell, Mail, Zap, MessageSquare, Heart, Star, Check, Copy } from 'daneshicons';
 import Badge from '../../lib/components/Badge';
 import StatusBadge from '../../lib/components/StatusBadge';
 import NotificationBadge from '../../lib/components/NotificationBadge';

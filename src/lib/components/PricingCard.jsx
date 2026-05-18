@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { Check } from 'lucide-react';
+import { Check } from 'daneshicons';
 
 const PricingCard = ({ title, price, period = '/month', description, features = [], cta, popular = false, className, ...props }) => {
   return (

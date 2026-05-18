@@ -4,7 +4,7 @@ import {
   RefreshCw, Play, Pause, 
   Layers, Command, Binary,
   Wind, Radio, Gauge, Move, Terminal, Copy, Check
-} from 'lucide-react';
+} from 'daneshicons';
 import { SectionTitle, NoteBlock, CodeBlock } from '../DocComponents';
 
 const SyncedButton = ({ 

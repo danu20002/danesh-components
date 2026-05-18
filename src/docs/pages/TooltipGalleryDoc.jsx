@@ -1,4 +1,4 @@
-import { Settings, User, Bell, Mail, HelpCircle, Info } from 'lucide-react';;
+import { Settings, User, Bell, Mail, HelpCircle, Info } from 'daneshicons';
 import Popover from '../../lib/components/Popover';
 import Tooltip from '../../lib/components/Tooltip';
 import Button from '../../lib/components/Button';
@@ -194,7 +194,7 @@ const TooltipGalleryDoc = () => {
         <CodeBlock
           title="Example.jsx"
           code={`import { Tooltip, Popover } from '@danesh-ui/react';
-import { Settings, Bell } from 'lucide-react';
+import { Settings, Bell } from 'daneshicons';
 
 function MyComponent() {
   return (

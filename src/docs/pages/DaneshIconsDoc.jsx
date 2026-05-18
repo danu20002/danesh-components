@@ -4,7 +4,7 @@ import {
   Compass, Cpu, Database, Download, Folder, Info, Key,
   Layers, Shield, ShoppingCart, Sparkles, Terminal, Trash, Upload, X
 } from 'daneshicons';
-import { ExternalLink, GitFork, Globe } from 'lucide-react';
+import { ExternalLink, GitFork, Globe } from 'daneshicons';
 import Button from '../../lib/components/Button';
 import { SectionTitle, NoteBlock, CodeBlock } from '../DocComponents';
 
@@ -54,7 +54,7 @@ const DaneshIconsDoc = () => {
           Each icon is a simple, composable React component that accepts <code className="text-[13px] font-mono theme-bg-secondary px-1.5 py-0.5 rounded theme-text-active">size</code>,{' '}
           <code className="text-[13px] font-mono theme-bg-secondary px-1.5 py-0.5 rounded theme-text-active">color</code>, and{' '}
           <code className="text-[13px] font-mono theme-bg-secondary px-1.5 py-0.5 rounded theme-text-active">className</code> props —
-          just like <code className="text-[13px] font-mono theme-bg-secondary px-1.5 py-0.5 rounded theme-text-active">lucide-react</code>.
+          just like <code className="text-[13px] font-mono theme-bg-secondary px-1.5 py-0.5 rounded theme-text-active">daneshicons</code>.
         </p>
 
         <div className="theme-bg-secondary border theme-border-secondary rounded-2xl px-6 py-4 flex items-center justify-between group mb-10 theme-shadow-sm hover:theme-shadow-md transition-all">
@@ -168,7 +168,7 @@ function App() {
       <section id="integration">
         <SectionTitle>Integration</SectionTitle>
         <NoteBlock type="info">
-          DaneshIcons can be used alongside <strong>lucide-react</strong> icons throughout the Danesh'UI library.
+          DaneshIcons is the primary icon library throughout the Danesh'UI library.
           Both libraries share the same SVG icon API (<code className="text-[13px] font-mono bg-black/10 dark:bg-white/10 px-1.5 py-0.5 rounded">size</code>,{' '}
           <code className="text-[13px] font-mono bg-black/10 dark:bg-white/10 px-1.5 py-0.5 rounded">color</code>,{' '}
           <code className="text-[13px] font-mono bg-black/10 dark:bg-white/10 px-1.5 py-0.5 rounded">className</code> props),

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DollarSign, Users, TrendingUp, Activity, Package, Eye, Download, ShoppingCart, FileX, Search, Home, Settings, Folder } from 'lucide-react';
+import { DollarSign, Users, TrendingUp, Activity, Package, Eye, Download, ShoppingCart, FileX, Search, Home, Settings, Folder } from 'daneshicons';
 import Table from '../../lib/components/Table';
 import Stat from '../../lib/components/Stat';
 import AvatarGroup from '../../lib/components/AvatarGroup';
@@ -75,7 +75,7 @@ const data = [
         <ComponentPreview
           title="Stat Variants"
           code={`import { Stat } from '@danesh-ui/react';
-import { DollarSign, Users, TrendingUp, Activity } from 'lucide-react';
+import { DollarSign, Users, TrendingUp, Activity } from 'daneshicons';
 
 <Stat title="Revenue" value="$42,500" change={12.5} changeLabel="vs last month" icon={DollarSign} />
 <Stat title="Users" value="8,249" change={-2.1} changeLabel="vs last week" icon={Users} />
@@ -136,7 +136,7 @@ import { DollarSign, Users, TrendingUp, Activity } from 'lucide-react';
         <ComponentPreview
           title="Navigation Breadcrumbs"
           code={`import { Breadcrumb } from '@danesh-ui/react';
-import { Home, Folder, Settings } from 'lucide-react';
+import { Home, Folder, Settings } from 'daneshicons';
 
 <Breadcrumb items={[
   { label: 'Home', icon: Home },
@@ -206,7 +206,7 @@ import { Home, Folder, Settings } from 'lucide-react';
         <ComponentPreview
           title="No Data Placeholder"
           code={`import { EmptyState, Button } from '@danesh-ui/react';
-import { Search } from 'lucide-react';
+import { Search } from 'daneshicons';
 
 <EmptyState
   icon={Search}

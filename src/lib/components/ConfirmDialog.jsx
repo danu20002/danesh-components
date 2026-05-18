@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { AlertTriangle, Info, X } from 'lucide-react';
+import { AlertTriangle, Info, X } from 'daneshicons';
 import Modal from './Modal';
 import Button from './Button';
 

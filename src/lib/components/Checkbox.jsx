@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { Check } from 'lucide-react';
+import { Check } from 'daneshicons';
 
 const Checkbox = ({ checked = false, onChange, label, description, disabled = false, className = "" }) => {
   return (

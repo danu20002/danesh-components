@@ -13,7 +13,7 @@ import {
   Smartphone,
   Tablet,
   ExternalLink
-} from 'lucide-react';
+} from 'daneshicons';
 import Button from '../../lib/components/Button';
 import Badge from '../../lib/components/Badge';
 import { SectionTitle, NoteBlock } from '../DocComponents';

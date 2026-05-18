@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Copy, ExternalLink, Download, Trash2, Plus, ArrowRight, Loader, Mail, Heart, Terminal, Star, Settings, Bell, Send } from 'lucide-react';
+import { Search, Copy, ExternalLink, Download, Trash2, Plus, ArrowRight, Loader, Mail, Heart, Terminal, Star, Settings, Bell, Send } from 'daneshicons';
 import Button from '../../lib/components/Button';
 import { ComponentPreview, PropsTable, SectionTitle, CodeBlock, ImportBlock, NoteBlock } from '../DocComponents';
 

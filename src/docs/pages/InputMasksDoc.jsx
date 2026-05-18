@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, CreditCard, Calendar, Hash, Clock, Shield, Copy, Check, Lock, User } from 'lucide-react';
+import { Phone, CreditCard, Calendar, Hash, Clock, Shield, Copy, Check, Lock, User } from 'daneshicons';
 import MaskedInput from '../../lib/components/MaskedInput';
 import { SectionTitle, NoteBlock, CodeBlock } from '../DocComponents';
 
@@ -111,7 +111,7 @@ const InputMasksDoc = () => {
       <CodeBlock
         title="MaskedInput.jsx"
         code={`import { MaskedInput } from '@danesh-ui/react';
-import { Phone, CreditCard, Calendar } from 'lucide-react';
+import { Phone, CreditCard, Calendar } from 'daneshicons';
 
 // Phone mask (auto-formats as you type)
 <MaskedInput mask="phone" label="Phone Number" icon={Phone} />

@@ -1,4 +1,4 @@
-import { User, Bell, Settings, Shield, Activity } from 'lucide-react';
+import { User, Bell, Settings, Shield, Activity } from 'daneshicons';
 import UnderlineTabs from '../../lib/components/UnderlineTabs';
 import PillTabs from '../../lib/components/PillTabs';
 import VerticalTabs from '../../lib/components/VerticalTabs';
@@ -37,7 +37,7 @@ const TabsVaultDoc = () => {
           <CodeBlock
             title="UnderlineTabs Example"
             code={`import { UnderlineTabs } from '@danesh-ui/react';
-import { User, Bell, Settings } from 'lucide-react';
+import { User, Bell, Settings } from 'daneshicons';
 
 <UnderlineTabs tabs={[
   { id: 'account', label: 'Account', icon: User, content: <p>Account details...</p> },
@@ -113,7 +113,7 @@ import { User, Bell, Settings } from 'lucide-react';
           <CodeBlock
             title="VerticalTabs Example"
             code={`import { VerticalTabs } from '@danesh-ui/react';
-import { User, Shield, Bell, Activity } from 'lucide-react';
+import { User, Shield, Bell, Activity } from 'daneshicons';
 
 <VerticalTabs tabs={[
   { id: 'profile', label: 'Profile', icon: User, content: <p>Profile...</p> },
@@ -134,7 +134,7 @@ import { User, Shield, Bell, Activity } from 'lucide-react';
         <CodeBlock
           title="TabsVault.jsx"
           code={`import { UnderlineTabs, PillTabs, VerticalTabs } from '@danesh-ui/react';
-import { User, Bell, Settings } from 'lucide-react';
+import { User, Bell, Settings } from 'daneshicons';
 
 // Underline (animated indicator)
 <UnderlineTabs tabs={[

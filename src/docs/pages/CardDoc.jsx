@@ -1,4 +1,4 @@
-import { MoreHorizontal, TrendingUp, Zap } from 'lucide-react';
+import { MoreHorizontal, TrendingUp, Zap } from 'daneshicons';
 import Card from '../../lib/components/Card';
 import Button from '../../lib/components/Button';
 import Badge from '../../lib/components/Badge';

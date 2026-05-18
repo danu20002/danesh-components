@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { clsx } from 'clsx';
-import { Minus, Plus } from 'lucide-react';
+import { Minus, Plus } from 'daneshicons';
 
 const CounterInput = ({
   label,

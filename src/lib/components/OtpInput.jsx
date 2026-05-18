@@ -1,6 +1,6 @@
 import { useRef, useCallback, useEffect, useState } from 'react';
 import { clsx } from 'clsx';
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'daneshicons';
 
 const OtpInput = ({
   length = 6,

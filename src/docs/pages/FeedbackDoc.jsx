@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Zap, Shield, Globe, Cpu, HelpCircle } from 'lucide-react';
+import { Zap, Shield, Globe, Cpu, HelpCircle } from 'daneshicons';
 import Progress from '../../lib/components/Progress';
 import Skeleton from '../../lib/components/Skeleton';
 import Accordion from '../../lib/components/Accordion';

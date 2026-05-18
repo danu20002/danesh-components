@@ -1,5 +1,5 @@
 import { useRef, useEffect, useMemo, useState } from 'react';
-import { ExternalLink, MapPin, Mail, Briefcase, Code, Star, Globe, Palette, Layers, Smartphone, GitFork, Calendar, Award, Building, Users, ChartBarIncreasing, Database, Brain, Server, Sparkles, Package, Download, Clock } from 'lucide-react';
+import { ExternalLink, MapPin, Mail, Briefcase, Code, Star, Globe, Palette, Layers, Smartphone, GitFork, Calendar, Award, Building, Users, ChartBarIncreasing, Database, Brain, Server, Sparkles, Package, Download, Clock } from 'daneshicons';
 import Button from '../../lib/components/Button';
 import Badge from '../../lib/components/Badge';
 import GlassCard from '../../lib/components/GlassCard';
@@ -554,7 +554,7 @@ const DeveloperDoc = () => {
               </div>
               <p className="text-sm theme-text-secondary mb-4 leading-relaxed">
                 200+ open-source SVG icons designed for modern web apps. Fully customizable with the same API as
-                lucide-react. Built for speed and consistency.
+                daneshicons. Built for speed and consistency.
               </p>
               <a href="https://daneshicons.vercel.app/" target="_blank" rel="noopener noreferrer"
                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E31B23] hover:underline">

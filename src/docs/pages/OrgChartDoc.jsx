@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import OrgChart, { VerticalOrgChart, HorizontalOrgChart } from '../../lib/components/OrgChart';
 import OrgChartSidebar, { VerticalOrgChartSidebar } from '../../lib/components/OrgChartSidebar';
 import { SectionTitle, NoteBlock, CodeBlock, ComponentPreview, PropsTable, ImportBlock } from '../DocComponents';
-import { Users, Building, Mail } from 'lucide-react';
+import { Users, Building, Mail } from 'daneshicons';
 import sampleData from '../data/OrgChartData.json';
 
 const OrgChartDoc = () => {

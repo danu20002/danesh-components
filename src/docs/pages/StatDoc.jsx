@@ -1,5 +1,5 @@
 import Stat from '../../lib/components/Stat';
-import { TrendingUp, TrendingDown, Users, CreditCard, ShoppingBag, Zap } from 'lucide-react';
+import { TrendingUp, TrendingDown, Users, CreditCard, ShoppingBag, Zap } from 'daneshicons';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 
 const StatDoc = () => {

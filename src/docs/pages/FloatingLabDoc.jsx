@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Lock, User, Search, AtSign, Globe, Key, Copy, Check } from 'lucide-react';
+import { Mail, Lock, User, Search, AtSign, Globe, Key, Copy, Check } from 'daneshicons';
 import FloatingInput from '../../lib/components/FloatingInput';
 import { SectionTitle, NoteBlock, CodeBlock } from '../DocComponents';
 
@@ -141,7 +141,7 @@ const FloatingLabDoc = () => {
       <CodeBlock
         title="FloatingInput.jsx"
         code={`import { FloatingInput } from '@danesh-ui/react';
-import { User, Mail, Lock } from 'lucide-react';
+import { User, Mail, Lock } from 'daneshicons';
 
 // Default variant
 <FloatingInput label="Full Name" icon={User} />

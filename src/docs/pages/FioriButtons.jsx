@@ -2,7 +2,7 @@ import {
   Check, X, AlertTriangle, 
   Settings, Bell, Plus, Trash2, Download, 
   RefreshCw, MoreHorizontal, Layers
-} from 'lucide-react';
+} from 'daneshicons';
 import Button from '../../lib/components/Button';
 import { SectionTitle, NoteBlock, CodeBlock } from '../DocComponents';
 

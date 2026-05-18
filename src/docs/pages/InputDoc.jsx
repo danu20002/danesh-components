@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Mail, Lock, Eye, EyeOff, User, AtSign, Link } from 'lucide-react';
+import { Search, Mail, Lock, Eye, EyeOff, User, AtSign, Link } from 'daneshicons';
 import Input from '../../lib/components/Input';
 import Button from '../../lib/components/Button';
 import { ComponentPreview, PropsTable, SectionTitle, NoteBlock } from '../DocComponents';
@@ -29,7 +29,7 @@ const InputDoc = () => {
         <SectionTitle>With Icons</SectionTitle>
         <ComponentPreview
           title="Icon Inputs"
-          code={`import { Search, Mail, Lock } from 'lucide-react';
+          code={`import { Search, Mail, Lock } from 'daneshicons';
 
 <Input label="Search" placeholder="Type to search..." icon={Search} />
 <Input label="Email" placeholder="you@company.com" icon={Mail} />
@@ -146,7 +146,7 @@ const InputDoc = () => {
         <ComponentPreview
           title="Login Form"
           code={`import { Input, Button } from '@danesh-ui/react';
-import { Mail, Lock, User } from 'lucide-react';
+import { Mail, Lock, User } from 'daneshicons';
 
 <div className="max-w-sm space-y-4 p-6 border rounded-2xl">
   <Input label="Full Name" placeholder="Alex Danesh" icon={User} />

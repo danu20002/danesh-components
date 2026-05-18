@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Copy, Check, Code2, Eye, Terminal } from 'lucide-react';
+import { Copy, Check, Code2, Eye, Terminal } from 'daneshicons';
 
 // ========================================
 // CodeBlock - Syntax-highlighted, copyable

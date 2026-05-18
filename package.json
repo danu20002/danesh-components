@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "daneshicons": "^1.0.6",
-    "lucide-react": "^1.16.0",
+    "daneshicons": "^1.0.7",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "tailwind-merge": "^3.6.0"

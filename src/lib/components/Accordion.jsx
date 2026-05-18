@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { clsx } from 'clsx';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'daneshicons';
 
 const AccordionItem = ({ title, children, isOpen, onToggle, icon: Icon }) => (
   <div className="border-b border-slate-100 last:border-b-0">

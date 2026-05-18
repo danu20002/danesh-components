@@ -1,5 +1,5 @@
 import Accordion from '../../lib/components/Accordion';
-import { HelpCircle, Shield, Zap } from 'lucide-react';
+import { HelpCircle, Shield, Zap } from 'daneshicons';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 
 const AccordionDoc = () => {

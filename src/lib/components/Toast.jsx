@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { clsx } from 'clsx';
-import { X, CheckCircle2, AlertCircle, AlertTriangle, Info } from 'lucide-react';
+import { X, CheckCircle2, AlertCircle, AlertTriangle, Info } from 'daneshicons';
 
 let toastId = 0;
 const listeners = new Set();

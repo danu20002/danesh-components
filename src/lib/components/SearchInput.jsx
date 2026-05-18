@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { clsx } from 'clsx';
-import { Search, X, Command } from 'lucide-react';
+import { Search, X, Command } from 'daneshicons';
 
 const SearchInput = React.forwardRef(({
   label,

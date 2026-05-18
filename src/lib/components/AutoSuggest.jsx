@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { clsx } from 'clsx';
-import { Search, ChevronDown, X } from 'lucide-react';
+import { Search, ChevronDown, X } from 'daneshicons';
 
 const AutoSuggest = ({
   label,

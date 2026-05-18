@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AlertCircle, CheckCircle2, AlertTriangle, Info, X } from 'lucide-react';
+import { AlertCircle, CheckCircle2, AlertTriangle, Info, X } from 'daneshicons';
 import { clsx } from 'clsx';
 
 const Alert = ({ title, children, variant = "info", dismissible = false, className = "" }) => {

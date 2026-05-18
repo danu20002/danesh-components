@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Settings, User, Bell } from 'lucide-react';
+import { Home, Settings, User, Bell } from 'daneshicons';
 import Tabs from '../../lib/components/Tabs';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 

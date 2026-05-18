@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { clsx } from 'clsx';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'daneshicons';
 
 const ExpandableCard = ({ title, subtitle, children, expanded: controlledExpanded, defaultExpanded = false, className, icon: IconComponent, ...props }) => {
   const [internalExpanded, setInternalExpanded] = useState(defaultExpanded);

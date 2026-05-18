@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ShoppingCart, User, Check, CreditCard, Loader2 } from 'lucide-react';;
+import { ShoppingCart, User, Check, CreditCard, Loader2 } from 'daneshicons';
 import CircularProgress from '../../lib/components/CircularProgress';
 import StepProgress from '../../lib/components/StepProgress';
 import SpinnerWithText from '../../lib/components/SpinnerWithText';
@@ -96,7 +96,7 @@ const ProgressGalleryDoc = () => {
           <CodeBlock
             title="StepProgress Example"
             code={`import { StepProgress } from '@danesh-ui/react';
-import { ShoppingCart, User, CreditCard, Check } from 'lucide-react';
+import { ShoppingCart, User, CreditCard, Check } from 'daneshicons';
 
 const steps = [
   { title: 'Cart', description: 'Review items', icon: ShoppingCart },
@@ -173,7 +173,7 @@ const [step, setStep] = useState(1);
           <CodeBlock
             title="FullPageSpinner Example"
             code={`import { FullPageSpinner, Button } from '@danesh-ui/react';
-import { Loader2 } from 'lucide-react';
+import { Loader2 } from 'daneshicons';
 
 const [visible, setVisible] = useState(false);
 
@@ -207,7 +207,7 @@ const [visible, setVisible] = useState(false);
   SpinnerWithText,
   FullPageSpinner,
 } from '@danesh-ui/react';
-import { ShoppingCart, User, CreditCard, Check } from 'lucide-react';
+import { ShoppingCart, User, CreditCard, Check } from 'daneshicons';
 
 // Circular indicator
 <CircularProgress value={75} size="md" variant="primary" showValue />

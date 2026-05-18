@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TrendingUp, DollarSign, Users, ShoppingCart, Activity, Settings, GitFork, Star } from 'lucide-react';
+import { TrendingUp, DollarSign, Users, ShoppingCart, Activity, Settings, GitFork, Star } from 'daneshicons';
 import GlassCard from '../../lib/components/GlassCard';
 import InteractiveCard from '../../lib/components/InteractiveCard';
 import MetricCard from '../../lib/components/MetricCard';
@@ -136,7 +136,7 @@ const CardLabDoc = () => {
       <CodeBlock
         showLineNumbers
         title="MetricCard.jsx"
-        code={`import { DollarSign, TrendingUp } from 'lucide-react';
+        code={`import { DollarSign, TrendingUp } from 'daneshicons';
 
 <MetricCard
   title="Revenue"
@@ -250,7 +250,7 @@ const CardLabDoc = () => {
         showLineNumbers
         title="ExpandableCard.jsx"
         code={`import { useState } from 'react';
-import { Settings } from 'lucide-react';
+import { Settings } from 'daneshicons';
 import ExpandableCard from '../../lib/components/ExpandableCard';
 
 const [expanded, setExpanded] = useState(false);

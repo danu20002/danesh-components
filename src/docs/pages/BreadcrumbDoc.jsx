@@ -1,5 +1,5 @@
 import Breadcrumb from '../../lib/components/Breadcrumb';
-import { Home, Folder, FileText } from 'lucide-react';
+import { Home, Folder, FileText } from 'daneshicons';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 
 const BreadcrumbDoc = () => {

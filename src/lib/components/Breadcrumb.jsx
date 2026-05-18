@@ -1,6 +1,6 @@
 import React from 'react';
 import { clsx } from 'clsx';
-import { ChevronRight, Home } from 'lucide-react';
+import { ChevronRight, Home } from 'daneshicons';
 
 const Breadcrumb = ({ items = [], separator, className = "" }) => {
   const Sep = separator || (() => <ChevronRight size={14} className="text-slate-400 mx-1 shrink-0" />);

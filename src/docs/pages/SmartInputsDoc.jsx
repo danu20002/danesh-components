@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import { Copy, Check } from 'daneshicons';
 import AutoSuggest from '../../lib/components/AutoSuggest';
 import CounterInput from '../../lib/components/CounterInput';
 import CurrencyInput from '../../lib/components/CurrencyInput';

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { clsx } from 'clsx';
-import { X } from 'lucide-react';
+import { X } from 'daneshicons';
 
 const TagInput = React.forwardRef(({
   label,

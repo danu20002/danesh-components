@@ -1,5 +1,5 @@
 import Select from '../../lib/components/Select';
-import { Globe, Shield, Zap } from 'lucide-react';
+import { Globe, Shield, Zap } from 'daneshicons';
 import { ComponentPreview, PropsTable, SectionTitle, ImportBlock } from '../DocComponents';
 
 const SelectDoc = () => {

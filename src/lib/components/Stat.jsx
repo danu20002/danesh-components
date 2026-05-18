@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import { TrendingUp, TrendingDown, Minus } from 'daneshicons';
 
 const Stat = ({ title, value, change, changeLabel, icon: Icon, variant = "default", className = "" }) => {
   const isPositive = change > 0;
