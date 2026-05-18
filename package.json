@@ -1,19 +1,50 @@
 {
-  "name": "danesh-components",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@danesh-ui/react",
+  "version": "1.0.0",
+  "description": "A modern, enterprise-grade React component library with 66+ production-ready components, built with Tailwind CSS v4 and DaneshIcons.",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src/lib"
+  ],
+  "sideEffects": false,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:lib": "vite build --mode lib",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danu20002/danesh-components.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "tailwind",
+    "daneshicons",
+    "enterprise",
+    "dashboard"
+  ],
+  "author": "Danesh",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "daneshicons": ">=1.0.0"
+  },
   "dependencies": {
     "clsx": "^2.1.1",
-    "daneshicons": "^1.0.7",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
@@ -27,6 +58,9 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "tailwindcss": "^4.3.0",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "daneshicons": "^1.0.7"
   }
 }

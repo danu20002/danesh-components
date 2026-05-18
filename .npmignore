@@ -1,0 +1,11 @@
+node_modules
+dist
+src/docs
+src/App.jsx
+src/main.jsx
+src/index.css
+public
+vite.config.js
+eslint.config.js
+*.md
+.env*
