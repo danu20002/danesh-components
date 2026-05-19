@@ -428,7 +428,7 @@ const Sidebar = ({ filteredSections, activeTab, setActiveTab, setMobileMenuOpen,
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(() => localStorage.getItem('danesh-tab') || 'Introduction');
-  const [theme, setTheme] = useState(() => localStorage.getItem('danesh-theme') || 'light');
+  const [theme, setTheme] = useState(() => localStorage.getItem('danesh-theme') || 'dark');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 

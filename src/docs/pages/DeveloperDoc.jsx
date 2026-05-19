@@ -168,29 +168,36 @@ const timeAgo = (dateStr) => {
   return `${years} year${years > 1 ? 's' : ''} ago`;
 };
 
+const formatDownloads = (n) => {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}k`;
+  return n.toLocaleString();
+};
+
 const PackagesGrid = () => {
-  const [packages, setPackages] = useState(PACKAGES.map(p => ({ ...p, loading: true, version: '', desc: '', time: '' })));
+  const [packages, setPackages] = useState(PACKAGES.map(p => ({ ...p, loading: true, version: '', desc: '', time: '', downloads: null })));
 
   useEffect(() => {
     let cancelled = false;
     PACKAGES.forEach(async (pkg, i) => {
       try {
-        const res = await fetch(`https://registry.npmjs.org/${pkg.registry}`);
-        if (!res.ok) throw new Error('fetch failed');
-        const data = await res.json();
+        const regRes = await fetch(`https://registry.npmjs.org/${pkg.registry}`);
+        if (!regRes.ok) throw new Error('fetch failed');
+        const dlRes = await fetch(`https://api.npmjs.org/downloads/point/last-month/${pkg.name}`);
+        const [data, dlData] = await Promise.all([regRes.json(), dlRes.ok ? dlRes.json() : Promise.resolve({ downloads: null })]);
         if (cancelled) return;
         const latestVer = data['dist-tags']?.latest || '';
         const pubTime = data.time?.[latestVer] || '';
         setPackages(prev => {
           const next = [...prev];
-          next[i] = { ...next[i], loading: false, version: latestVer, desc: data.description || '', time: pubTime ? timeAgo(pubTime) : '' };
+          next[i] = { ...next[i], loading: false, version: latestVer, desc: data.description || '', time: pubTime ? timeAgo(pubTime) : '', downloads: dlData.downloads ?? null };
           return next;
         });
       } catch {
         if (cancelled) return;
         setPackages(prev => {
           const next = [...prev];
-          next[i] = { ...next[i], loading: false, version: '—', desc: 'Could not load package info', time: '' };
+          next[i] = { ...next[i], loading: false, version: '—', desc: 'Could not load package info', time: '', downloads: null };
           return next;
         });
       }
@@ -221,9 +228,9 @@ const PackagesGrid = () => {
                 {pkg.loading ? 'Fetching package info...' : pkg.desc}
               </p>
               <div className="flex items-center gap-3 mt-3 text-[11px] theme-text-tertiary">
-                <span className="flex items-center gap-1">
+                <span className="flex items-center gap-1" title="Downloads last month">
                   <Download size={11} />
-                  {pkg.name.startsWith('@') ? '@daneshnaik' : 'daneshnaik'}
+                  {pkg.downloads !== null ? `${formatDownloads(pkg.downloads)}/mo` : '—'}
                 </span>
                 {!pkg.loading && pkg.time && (
                   <span className="flex items-center gap-1">

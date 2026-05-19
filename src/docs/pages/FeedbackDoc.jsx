@@ -122,7 +122,7 @@ toast.info('Info', { description: 'New update available.' });`}
                 { title: "What is Danesh'UI?", icon: Zap, content: "Danesh'UI is an enterprise-grade React component library built with Tailwind CSS. It provides pre-built, accessible UI components for building modern dashboards and applications." },
                 { title: "How do I install it?", icon: Shield, content: "Run `npm install @danesh-ui/react` in your project. Make sure you have Tailwind CSS configured in your project as a prerequisite." },
                 { title: "Is it open source?", icon: Globe, content: "Danesh'UI is currently in private beta. We plan to open-source the core library in the v1.0.0 release." },
-                { title: "What's the tech stack?", icon: Cpu, content: "React 18+, Tailwind CSS v4, Lucide Icons, and clsx for class composition. All components are tree-shakeable." },
+                { title: "What's the tech stack?", icon: Cpu, content: "React 18+, Tailwind CSS v4, DaneshIcons, and clsx for class composition. All components are tree-shakeable." },
               ]}
             />
           </div>

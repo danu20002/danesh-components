@@ -262,7 +262,7 @@ const [page, setPage] = useState(3);
           { name: 'value', type: 'string', default: '—', description: 'Metric value' },
           { name: 'change', type: 'number', default: '—', description: 'Percentage change' },
           { name: 'changeLabel', type: 'string', default: '—', description: 'Change context (e.g., "vs last month")' },
-          { name: 'icon', type: 'LucideIcon', default: '—', description: 'Metric icon' },
+          { name: 'icon', type: 'DaneshIcon', default: '—', description: 'Metric icon' },
           { name: 'variant', type: '"default" | "filled" | "gradient"', default: '"default"', description: 'Visual style' },
         ]} />
       </section>

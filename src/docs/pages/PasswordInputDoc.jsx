@@ -122,7 +122,7 @@ import { Key } from 'daneshicons';
           { name: 'label', type: 'string', default: '—', description: 'Label above the input' },
           { name: 'error', type: 'string', default: '—', description: 'Error message' },
           { name: 'hint', type: 'string', default: '—', description: 'Helper text below input' },
-          { name: 'icon', type: 'LucideIcon', default: '—', description: 'Left-side icon' },
+          { name: 'icon', type: 'DaneshIcon', default: '—', description: 'Left-side icon' },
           { name: 'showStrength', type: 'boolean', default: 'false', description: 'Show strength meter' },
           { name: 'allowCopy', type: 'boolean', default: 'false', description: 'Show copy-to-clipboard button' },
           { name: 'size', type: '"sm" | "md" | "lg"', default: '"md"', description: 'Input size' },

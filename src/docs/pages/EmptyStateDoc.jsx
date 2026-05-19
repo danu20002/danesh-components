@@ -55,7 +55,7 @@ const EmptyStateDoc = () => {
       <section id="api-reference">
         <SectionTitle>API Reference</SectionTitle>
         <PropsTable props={[
-          { name: 'icon', type: 'LucideIcon', default: '—', description: 'Central illustration icon' },
+          { name: 'icon', type: 'DaneshIcon', default: '—', description: 'Central illustration icon' },
           { name: 'title', type: 'string', default: '—', description: 'Main header text' },
           { name: 'description', type: 'string', default: '—', description: 'Supporting text below the title' },
           { name: 'action', type: 'ReactNode', default: '—', description: 'Optional call-to-action component' },

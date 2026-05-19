@@ -154,8 +154,8 @@ const ButtonDoc = () => {
           { name: 'square', type: 'boolean', default: 'false', description: 'Forces 1:1 aspect ratio for icon buttons.' },
           { name: 'fullWidth', type: 'boolean', default: 'false', description: 'Sets width to 100% of container.' },
           { name: 'animation', type: '"none" | "shine" | "slide" | "pulse"', default: '"none"', description: 'Advanced hover animation effects.' },
-          { name: 'icon', type: 'LucideIcon', default: '—', description: 'Optional left-side icon.' },
-          { name: 'iconRight', type: 'LucideIcon', default: '—', description: 'Optional right-side icon.' },
+          { name: 'icon', type: 'DaneshIcon', default: '—', description: 'Optional left-side icon.' },
+          { name: 'iconRight', type: 'DaneshIcon', default: '—', description: 'Optional right-side icon.' },
           { name: 'loading', type: 'boolean', default: 'false', description: 'Toggles loading spinner and disables clicks.' },
           { name: 'disabled', type: 'boolean', default: 'false', description: 'Disables interaction and dims opacity.' },
         ]} />

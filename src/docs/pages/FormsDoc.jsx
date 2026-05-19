@@ -160,7 +160,7 @@ const FormsDoc = () => {
           { name: 'label', type: 'string', default: '—', description: 'Label text' },
           { name: 'error', type: 'string', default: '—', description: 'Error message' },
           { name: 'hint', type: 'string', default: '—', description: 'Help text' },
-          { name: 'icon', type: 'LucideIcon', default: '—', description: 'Left icon' },
+          { name: 'icon', type: 'DaneshIcon', default: '—', description: 'Left icon' },
           { name: 'placeholder', type: 'string', default: '"Select an option..."', description: 'Placeholder text' },
         ]} />
       </section>

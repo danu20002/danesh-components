@@ -32,5 +32,6 @@ export default defineConfig(({ command, mode }) => {
   // Default app build & serve
   return {
     plugins: [react(), tailwindcss()],
+    base: process.env.BASE_URL || '/',
   }
 })

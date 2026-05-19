@@ -65,7 +65,7 @@ const SelectDoc = () => {
         <PropsTable props={[
           { name: 'options', type: 'SelectOption[]', default: '[]', description: 'Array of { value, label, disabled? }' },
           { name: 'label', type: 'string', default: '—', description: 'Label text' },
-          { name: 'icon', type: 'LucideIcon', default: '—', description: 'Left-side icon' },
+          { name: 'icon', type: 'DaneshIcon', default: '—', description: 'Left-side icon' },
           { name: 'error', type: 'string', default: '—', description: 'Error message' },
           { name: 'hint', type: 'string', default: '—', description: 'Helper text' },
           { name: 'placeholder', type: 'string', default: '"Select an option..."', description: 'Placeholder text' },

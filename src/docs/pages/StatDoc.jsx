@@ -71,7 +71,7 @@ const StatDoc = () => {
         <PropsTable props={[
           { name: 'label', type: 'string', default: '—', description: 'Stat category title' },
           { name: 'value', type: 'string | number', default: '—', description: 'The main statistical value' },
-          { name: 'icon', type: 'LucideIcon', default: '—', description: 'Category icon' },
+          { name: 'icon', type: 'DaneshIcon', default: '—', description: 'Category icon' },
           { name: 'trend', type: 'string', default: '—', description: 'Trend percentage or label' },
           { name: 'trendType', type: '"increase" | "decrease" | "neutral"', default: '"neutral"', description: 'Influences trend color and indicator' },
         ]} />
